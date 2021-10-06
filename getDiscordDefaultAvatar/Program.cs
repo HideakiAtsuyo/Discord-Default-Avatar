@@ -1,10 +1,9 @@
-﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json.Linq;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Net;
 using System.Runtime.InteropServices;
-
 
 namespace getDiscordDefaultAvatar
 {
@@ -26,7 +25,6 @@ namespace getDiscordDefaultAvatar
 
         public static string getUser(string token)
         {
-
             WebClient Client = new WebClient();
             Client.Headers.Set("Authorization", token);
             string res = Client.DownloadString($"https://discord.com/api/v9/users/@me");
